@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <h3>home page</h3>
+    <nav>
+      <ul>
+        <li>
+          <router-link to="scoreboard">Scoreboard</router-link>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -12,3 +18,21 @@ export default createComponent({
   setup() {},
 })
 </script>
+
+<style lang="scss" scoped>
+nav {
+  ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    li {
+      padding: 0.5rem 0;
+      a {
+        color: #db4c40;
+      }
+    }
+  }
+}
+</style>

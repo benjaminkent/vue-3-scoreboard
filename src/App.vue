@@ -8,7 +8,7 @@
 <script lang="ts">
 import { createComponent } from '@vue/composition-api'
 
-import AppHeader from '@/components/AppHeader'
+import AppHeader from '@/components/AppHeader.vue'
 
 export default createComponent({
   name: 'App',

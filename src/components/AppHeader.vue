@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+import { createComponent } from '@vue/composition-api'
+export default createComponent({
   name: 'AppHeader',
   setup() {},
 })
@@ -15,7 +15,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 header {
   padding: 2rem 1rem;
-  background-color: #eee;
+  background-color: #f0c987;
   display: flex;
   justify-content: center;
   align-items: center;
