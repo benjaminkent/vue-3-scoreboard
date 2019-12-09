@@ -12,12 +12,17 @@
         v-model="state.teamName"
         type="text"
         id="teamName"
-        placeholder="Cubs"
+        placeholder="E.g. Cubs"
       />
       <button type="submit">Create Team</button>
     </form>
     <div class="teams-container">
-      <Team v-for="(team, index) in teams" :key="index" />
+      <Team
+        v-for="(team, index) in teams"
+        :key="index"
+        :teamInfo="team"
+        :index="index"
+      />
     </div>
   </div>
 </template>
@@ -75,8 +80,8 @@ export default createComponent({
   align-items: center;
   button {
     padding: 10px 16px;
-    border: 1px solid $red;
-    background-color: $red;
+    border: 1px solid $purple;
+    background-color: $purple;
     color: $white;
     font-size: 1rem;
     border-radius: 5px;
@@ -99,8 +104,8 @@ form {
   button {
     font-size: 0.8rem;
     padding: 8px 0;
-    border: 1px solid $red;
-    background-color: $red;
+    border: 1px solid $purple;
+    background-color: $purple;
     border-radius: 5px;
     color: $white;
   }
