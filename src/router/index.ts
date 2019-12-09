@@ -10,6 +10,11 @@ const routes = [
     name: 'Home',
     component: Home as Vue.VueConstructor,
   },
+  {
+    path: '/scoreboard',
+    name: 'Scoreboard',
+    component: () => import('@/views/Scoreboard.vue'),
+  },
 ]
 
 const router = new VueRouter({

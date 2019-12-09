@@ -29,9 +29,6 @@ nav {
     flex-direction: column;
     li {
       padding: 0.5rem 0;
-      a {
-        color: #db4c40;
-      }
     }
   }
 }
