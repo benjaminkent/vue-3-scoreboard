@@ -3,8 +3,8 @@
     <h2 class="team-name">{{ teamInfo.name }}</h2>
     <h2 class="score">{{ teamInfo.score }}</h2>
     <div class="buttons">
-      <button class="add">+</button>
-      <button class="subtract">-</button>
+      <button @click="handleAddPoint(index)" class="add">+</button>
+      <button @click="handleSubtractPoint(index)" class="subtract">-</button>
     </div>
   </div>
 </template>
@@ -18,7 +18,16 @@ export default createComponent({
     teamInfo: Object,
     index: Number,
   },
-  setup() {},
+  setup() {
+    return {
+      handleAddPoint(index: number) {
+        this.$emit('addPoint', index)
+      },
+      handleSubtractPoint(index: number) {
+        this.$emit('subtractPoint', index)
+      },
+    }
+  },
 })
 </script>
 

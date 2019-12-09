@@ -22,6 +22,8 @@
         :key="index"
         :teamInfo="team"
         :index="index"
+        @addPoint="add"
+        @subtractPoint="subtract"
       />
     </div>
   </div>
@@ -44,6 +46,7 @@ export default createComponent({
     const teamService = useTeamService()
 
     async function handleCreateTeam() {
+      if (state.teamName === '') return
       await this.newTeam(state.teamName)
       state.teamName = ''
       state.addingTeam = false
@@ -53,10 +56,21 @@ export default createComponent({
       state.addingTeam = true
     }
 
+    function add(index) {
+      teamService.state.teams.value[index].score++
+    }
+
+    function subtract(index) {
+      if (teamService.state.teams.value[index].score <= 0) return
+      teamService.state.teams.value[index].score--
+    }
+
     return {
       state,
       handleCreateTeam,
       handleAddTeam,
+      add,
+      subtract,
       teams: teamService.state.teams,
       newTeam: teamService.addTeam,
     }

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Vue 3 Scoreboard</h1>
+    <h1>Vue 3 Projects</h1>
   </header>
 </template>
 
