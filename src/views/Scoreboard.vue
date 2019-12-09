@@ -86,6 +86,7 @@ export default createComponent({
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .add-team {
   margin: 20px;
