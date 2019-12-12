@@ -13,7 +13,8 @@ const routes = [
   {
     path: '/scoreboard',
     name: 'Scoreboard',
-    component: () => import('@/views/Scoreboard.vue'),
+    component: () =>
+      import(/* webpackChunkName: "scoreboard" */ '@/views/Scoreboard.vue'),
   },
 ]
 
